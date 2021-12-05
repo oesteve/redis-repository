@@ -1,0 +1,34 @@
+{
+    "name": "oesteve/redis-repository",
+    "description": "An easy way to build a Redis repository",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Oesteve\\RedisRepository\\": "lib/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Oesteve\\RedisRepository\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "oesteve",
+            "email": "oscar@oscaresteve.com"
+        }
+    ],
+    "scripts": {
+        "test": "./vendor/bin/phpunit tests",
+        "php-cs-fixer": "./vendor/bin/php-cs-fixer fix",
+        "phpstan": "vendor/bin/phpstan analyse --level 8 lib tests"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "friendsofphp/php-cs-fixer": "^3.3",
+        "phpstan/phpstan": "^1.2"
+    },
+    "require": {
+        "ext-redis": "*"
+    }
+}
